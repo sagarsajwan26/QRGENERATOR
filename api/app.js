@@ -13,7 +13,9 @@ const userRouter=require('../routes/UserRoutes')
 
 app.use(bodyParser.json())
 app.use(cors({
-    origin:process.env.CLIENT_URL
+    origin:process.env.CLIENT_URL,
+    methods:['POST','GET','PUT','PATCH','DELETE'],
+    credentials:true
 }))
 
 
